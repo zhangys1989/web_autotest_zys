@@ -19,6 +19,10 @@ import sun.plugin.javascript.navig.Navigator;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.After;
+import org.junit.Assert.*;
+import mysql.mysql;
+
+import static java.lang.Thread.sleep;
 
 /**
  * Created by zhangys。
@@ -26,12 +30,28 @@ import org.junit.After;
 
 public class test1 {
     public  WebDriver driver;
+
     @Before
-    public  void setUp(){
+    public  void setUp() throws Exception{
+
     }
 
     @Test
-    public static  void main(String[] args){
+  /*  public void test11() throws InterruptedException {
+        WebDriver driver=new ChromeDriver();
+        Navigation navigator=driver.navigate();
+        navigator.to("http://www.baidu.com");
+        navigator.refresh();
+        driver.findElement(By.id("kw")).sendKeys("自动化测试");
+        driver.findElement(By.id("su"));
+        sleep(2000);
+
+        driver.findElement(By.id("kw")).clear();//清除输入
+        sleep(2000);
+        String url=driver.getCurrentUrl();
+        System.out.println(url);
+    }*/
+   public static  void main(String[] args) throws InterruptedException {
         WebDriver driver=new ChromeDriver();
         Navigation navigator=driver.navigate();
         navigator.to("http://www.baidu.com");
@@ -40,16 +60,24 @@ public class test1 {
        // baidutextbox.sendKeys("ceshi");
         driver.findElement(By.id("kw")).sendKeys("自动化测试");
         driver.findElement(By.id("su"));
+        Thread.sleep(2000);
+
+        driver.findElement(By.id("kw")).clear();//清除输入
+        Thread.sleep(2000);
+        String url=driver.getCurrentUrl();
+        System.out.println(url);
+        driver.quit();
+
+
 
 
 
     }
+
     @After
     public void  tearDown() throws Exception {
-
         driver.quit();
-        driver.close();
-
+        //driver.close();
     }
 
 
