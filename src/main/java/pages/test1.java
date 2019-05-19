@@ -37,7 +37,7 @@ public class test1 {
     }
 
     @Test
-  /*  public void test11() throws InterruptedException {
+    public void test11() throws InterruptedException {
         WebDriver driver=new ChromeDriver();
         Navigation navigator=driver.navigate();
         navigator.to("http://www.baidu.com");
@@ -50,8 +50,9 @@ public class test1 {
         sleep(2000);
         String url=driver.getCurrentUrl();
         System.out.println(url);
-    }*/
-   public static  void main(String[] args) throws InterruptedException {
+       // driver.quit();
+    }
+  /* public static  void main(String[] args) throws InterruptedException {
         WebDriver driver=new ChromeDriver();
         Navigation navigator=driver.navigate();
         navigator.to("http://www.baidu.com");
@@ -72,11 +73,11 @@ public class test1 {
 
 
 
-    }
+    }*/
 
     @After
     public void  tearDown() throws Exception {
-        driver.quit();
+      //  driver.quit();
         //driver.close();
     }
 
