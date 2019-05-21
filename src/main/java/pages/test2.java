@@ -11,14 +11,16 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.*;
+import org.testng.annotations.Test;
+
 
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
 import sun.plugin.javascript.navig.Navigator;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.After;
 import org.junit.Assert.*;
 import mysql.mysql;
 
@@ -28,16 +30,16 @@ import static java.lang.Thread.sleep;
  * Created by zhangys。
  */
 
-public class test1 {
+public class test2 {
     public  WebDriver driver;
 
-    @Before
+    @BeforeTest
     public  void setUp() throws Exception{
 
     }
 
-    @Test
-    public void test11() throws InterruptedException {
+    @org.testng.annotations.Test
+    public void test12() throws InterruptedException {
         WebDriver driver=new ChromeDriver();
         Navigation navigator=driver.navigate();
         navigator.to("http://www.baidu.com");
@@ -75,9 +77,9 @@ public class test1 {
 
     }*/
 
-    @After
+    @AfterTest
     public void  tearDown() throws Exception {
-      //  driver.quit();
+        //  driver.quit();
         //driver.close();
     }
 
