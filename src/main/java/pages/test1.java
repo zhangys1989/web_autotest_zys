@@ -15,7 +15,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
-import sun.plugin.javascript.navig.Navigator;
+//import sun.plugin.javascript.navig.Navigator;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.After;

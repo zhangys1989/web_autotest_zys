@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <suite name="Suite" parallel="false">
     <test name="pages">
-        <!--<packages>-->
-        <!--<package name="pages"/>-->
-        <!--</packages>-->
+        <packages>
+        <package name="pages.*"/>
+        </packages>
         <classes>
             <class name="pages.test2"></class>
-            <class name="pages.test1"/>
+            <class name="pages.test3"/>
 
         </classes>
     </test>
